@@ -83,6 +83,7 @@ class _RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
     // #docregion itemBuilder
+    print("build");
     return Scaffold(
       appBar: AppBar(
         title: const Text('Startup Name Generator'),
@@ -103,6 +104,7 @@ class _RandomWordsState extends State<RandomWords> {
             _suggestions.addAll(generateWordPairs().take(10)); /*4*/
           }
           final alreadySaved = _saved.contains(_suggestions[index]);
+          print("$_suggestions");
           // #docregion listTile
           return ListTile(
             title: Text(
